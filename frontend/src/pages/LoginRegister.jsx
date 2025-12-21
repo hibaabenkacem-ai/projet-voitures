@@ -62,6 +62,7 @@ export default function LoginRegister() {
         )}
         <input name="email" placeholder="Email" onChange={handleChange} required />
         <input name="password" type="password" placeholder="Password" onChange={handleChange} required />
+        
         <button type="submit">{isLogin ? "Login" : "Register"}</button>
       </form>
       <button onClick={() => setIsLogin(!isLogin)}>

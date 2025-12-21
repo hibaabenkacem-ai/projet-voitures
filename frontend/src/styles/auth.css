@@ -1,0 +1,46 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  color: white;
+  padding: 60px;
+}
+
+.auth-left h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* RIGHT */
+.auth-right {
+  flex: 1;
+  background: var(--white);
+}
+
+.auth-box {
+  width: 400px;
+}
+
+/* TABS */
+.auth-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-tabs button {
+  flex: 1;
+  padding: 12px;
+  background: var(--gray);
+  border: none;
+  cursor: pointer;
+}
+
+.auth-tabs .active {
+  background: var(--black);
+  color: white;
+}

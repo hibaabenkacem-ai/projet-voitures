@@ -1,0 +1,57 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+/* HERO */
+.hero-section {
+  display: flex;
+  align-items: flex-start; /* ✅ مهم */
+  justify-content: space-between;
+  padding: 80px 8%;
+  min-height: calc(100vh - 80px);
+  background: url("/car.png") no-repeat right center / contain;
+}
+
+/* TEXT */
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* FORM تحت النص */
+.auth-under-text {
+  margin-top: 40px;
+  max-width: 420px;
+}

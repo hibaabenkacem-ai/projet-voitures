@@ -1,4 +1,9 @@
 import React from "react";
+import "./styles/variables.css";
+import "./styles/base.css";
+import "./styles/layout.css";
+import "./styles/components.css";
+import "./styles/auth.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoginRegister from "./pages/LoginRegister";

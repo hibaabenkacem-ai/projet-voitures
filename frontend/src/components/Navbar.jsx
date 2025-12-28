@@ -1,10 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  const scrollTo = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="container flex-between">
+
         {/* LOGO */}
         <div className="logo">
           <span className="logo-orange">Auto</span>Market
@@ -12,10 +20,17 @@ export default function Navbar() {
 
         {/* LINKS */}
         <ul className="nav-links">
-          <li><Link to="#">À propos</Link></li>
-          <li><Link to="#">Nos voitures</Link></li>
-          <li><Link to="#">Contact</Link></li>
+          <li>
+            <button onClick={() => scrollTo("about")}>À propos</button>
+          </li>
+          <li>
+            <button onClick={() => scrollTo("cars")}>Nos voitures</button>
+          </li>
+          <li>
+            <button onClick={() => scrollTo("contact")}>Contact</button>
+          </li>
         </ul>
+
       </div>
     </nav>
   );

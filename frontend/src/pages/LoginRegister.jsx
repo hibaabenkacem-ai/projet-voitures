@@ -1,3 +1,4 @@
+// LoginRegister.jsx
 import React, { useState } from "react";
 import API from "../api";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +43,7 @@ export default function LoginRegister() {
         ? navigate("/admin/home")
         : navigate("/user/home");
 
-    } catch (err) {
+    } catch {
       alert("Erreur dans les informations");
     }
   };
@@ -51,18 +52,14 @@ export default function LoginRegister() {
     <>
       <Navbar />
 
+      {/* HERO */}
       <div className="hero-section">
-
-        {/* LEFT */}
         <div className="hero-text">
           <h1>Vendez et achetez votre voiture facilement</h1>
-          <p>
-            Plateforme moderne pour l’achat et la vente de voitures au Maroc
-          </p>
+          <p>Plateforme moderne pour l’achat et la vente de voitures au Maroc</p>
 
-          {/* FORM تحت النص */}
           <div className="auth-under-text">
-            <div className="auth-box card">
+            <div className="auth-box">
 
               <div className="auth-tabs">
                 <button
@@ -84,41 +81,14 @@ export default function LoginRegister() {
               <form onSubmit={handleSubmit}>
                 {!isLogin && (
                   <>
-                    <input
-                      className="input"
-                      name="name"
-                      placeholder="Nom complet"
-                      onChange={handleChange}
-                    />
-                    <input
-                      className="input"
-                      name="phone"
-                      placeholder="Téléphone"
-                      onChange={handleChange}
-                    />
-                    <input
-                      className="input"
-                      name="address"
-                      placeholder="Ville"
-                      onChange={handleChange}
-                    />
+                    <input className="input" name="name" placeholder="Nom complet" onChange={handleChange} />
+                    <input className="input" name="phone" placeholder="Téléphone" onChange={handleChange} />
+                    <input className="input" name="address" placeholder="Ville" onChange={handleChange} />
                   </>
                 )}
 
-                <input
-                  className="input"
-                  name="email"
-                  placeholder="Adresse e-mail"
-                  onChange={handleChange}
-                />
-
-                <input
-                  className="input"
-                  type="password"
-                  name="password"
-                  placeholder="Mot de passe"
-                  onChange={handleChange}
-                />
+                <input className="input" name="email" placeholder="Adresse e-mail" onChange={handleChange} />
+                <input className="input" type="password" name="password" placeholder="Mot de passe" onChange={handleChange} />
 
                 {!isLogin && (
                   <input
@@ -130,7 +100,7 @@ export default function LoginRegister() {
                   />
                 )}
 
-                <button className="btn btn-orange" type="submit">
+                <button className="btn btn-orange">
                   {isLogin ? "Se connecter" : "S’inscrire"}
                 </button>
               </form>
@@ -138,8 +108,30 @@ export default function LoginRegister() {
             </div>
           </div>
         </div>
-
       </div>
+
+      {/* ===== SECTIONS ===== */}
+      <section id="about" className="section">
+        <h2>À propos</h2>
+        <p>
+          AutoMarket est une plateforme moderne pour faciliter la vente
+          et l’achat de voitures au Maroc en toute confiance.
+        </p>
+      </section>
+
+      <section id="cars" className="section gray">
+        <h2>Nos voitures</h2>
+        <p>
+          SUV, citadines, berlines et voitures neuves ou d’occasion
+          disponibles partout au Maroc.
+        </p>
+      </section>
+
+      <section id="contact" className="section">
+        <h2>Contact</h2>
+        <p>Email : contact@automarket.ma</p>
+        <p>Téléphone : 06 12 34 56 78</p>
+      </section>
     </>
   );
 }
